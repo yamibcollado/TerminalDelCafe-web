@@ -1,8 +1,67 @@
 {% extends "cafeWebApp/base.html" %}
+{% load static %}
 
-{% block title %}Home{% endblock %}
 
 {% block content %}
-<h1>Bienvenido a la Home</h1>
-<p>Este es el contenido de la página principal.</p>
+
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+  
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'img/cafe1.jpg' %}" class="d-block w-100 vh-50" style="object-fit: cover;" alt="cafe1">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/cafe2.jpg' %}" class="d-block w-100 vh-50" style="object-fit: cover;" alt="cafe2">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/cafe3.jpg' %}" class="d-block w-100 vh-50" style="object-fit: cover;" alt="cafe3">
+      </div>
+    </div>
+  
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+
+  <div class="row justify-content-center text-center mt-4">
+    <div class="col-md-3 m-2">
+      <div class="card h-100">
+        <img src="{% static 'img/cafe1.jpg' %}" class="card-img-top" alt="cafe1" style="height:150px; object-fit:cover;">
+        <div class="card-body">
+          <p class="card-text">HOLA</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-3 m-2">
+      <div class="card h-100">
+        <img src="{% static 'img/cafe2.jpg' %}" class="card-img-top" alt="cafe2" style="height:150px; object-fit:cover;">
+        <div class="card-body">
+          <p class="card-text">COMO</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-3 m-2">
+      <div class="card h-100">
+        <img src="{% static 'img/cafe3.jpg' %}" class="card-img-top" alt="cafe3" style="height:150px; object-fit:cover;">
+        <div class="card-body">
+          <p class="card-text">VAI</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
 {% endblock %}

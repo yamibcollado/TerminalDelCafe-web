@@ -5,8 +5,21 @@ Servicios
 {% endblock %}
 
 {% block content %}
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Panel de servicios</h1>
 
-<h1> Bienvenido a los servicios </h1>
-<p>Servicios disponibles</p>
-
+    <div class="row justify-content-center">
+        {% for servicio in servicios %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <img src="{{ servicio.imagen.url }}" class="card-img-top img-fluid p-3" alt="{{servicio.titulo}}" style="max-height:300px; object-fit:cover;">
+                <div class="card-body text-center">
+                    <h2 class="h5">{{ servicio.titulo }}</h2>
+                    <p class="card-text">{{ servicio.contenido }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

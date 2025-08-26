@@ -4,7 +4,7 @@ from django.db import models
 class Servicio(models.Model):
     titulo=models.CharField(max_length=20)
     contenido=models.CharField(max_length=50)
-    imagen=models.ImageField()
+    imagen=models.ImageField(upload_to='servicio')
     precio=models.IntegerField()
 
     class Meta:

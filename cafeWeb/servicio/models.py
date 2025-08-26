@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Servicio(models.Model):
     titulo=models.CharField(max_length=20)
     contenido=models.CharField(max_length=50)

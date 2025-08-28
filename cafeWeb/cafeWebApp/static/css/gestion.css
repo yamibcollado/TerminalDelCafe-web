@@ -1,0 +1,24 @@
+
+/*----------- APP CONTACTO --------------- */
+
+/* Fondo general de la página de contacto */
+.contacto-fondo {
+    min-height: 100vh; /* altura completa */
+    background-image: url('../img/fondo_contacto.jpg'); /* ruta relativa desde css */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Recuadro blanco centrado */
+.contacto-recuadro {
+    background-color: rgba(255, 252, 252, 0.9); /* blanco con 90% de opacidad */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+    max-width: 600px;
+    width: 100%;
+}
+

@@ -10,9 +10,11 @@ urlpatterns = [
 
     #enlace a urls de nuestra aplicacion "cafeWebApp"
     path('', include('cafeWebApp.urls')),
-
     path('servicios/', include('servicio.urls')),
     path('contacto/', include('contacto.urls')),
+    path('tienda/', include('tienda.urls')),
+
+
 
     
 ]

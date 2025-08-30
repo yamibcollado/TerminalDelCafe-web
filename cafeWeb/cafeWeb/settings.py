@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'servicio',
     'contacto',
     'widget_tweaks',
+    'tienda',
 ]
 
 

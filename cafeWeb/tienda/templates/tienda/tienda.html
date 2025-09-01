@@ -5,8 +5,23 @@ Tienda
 {% endblock %}
 
 {% block content %}
+<div class="container mt-4">
+    <h1 class="text-center mb-4">¡Selecciona tus favoritos!</h1>
 
-<h1>Bienvenido a la Tienda</h1>
-<p>Productos disponibles</p>
+    <div class="row justify-content-center">
 
+        {% for producto in productos %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <img src="{{ producto.imagen.url }}" class="card-img-top img-fluid p-3" alt="{{producto.nombre}}" style="max-height:300px; object-fit:cover;">
+                <div class="card-body text-center">
+                    <h2 class="h5">{{ producto.nombre }}</h2>
+                    <p class="card-text"> Especialidad del chef</p>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
